@@ -1,0 +1,12 @@
+<div>
+  <p>Catergory</p>
+  <nav>
+    <ul>
+      <li *ngFor="let cat of categories">
+        <span>
+          <a (click)="onClickGotoCategory(cat)">{{ cat.categoryAlias }}</a>
+        </span>
+      </li>
+    </ul>
+  </nav>
+</div>

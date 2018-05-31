@@ -1,0 +1,35 @@
+<div class="shopcart">
+    <div class="shopcart-noproduct-info"
+        *ngIf="!hasProductsInShopcart()">
+        <p>Não há produtos no carrinho</p>
+    </div>
+    <div *ngIf="hasProductsInShopcart()">
+        <div class="shopcart-item" 
+            *ngFor="let item of shopcartitems">
+            <div class="shopcart-item-controller">
+                <div (click)="onDecrementHandler(item)">menos</div>
+                <div (click)="onIncrementHandler(item)">mais</div>
+            </div>
+            <div class="shopcart-item-info">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Nome</td>
+                            <td>Preço</td>
+                            <td>Total</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.price }}</td>
+                            <td>{{ item.total }}</td>
+                            <td>{{ item.fullPrice }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

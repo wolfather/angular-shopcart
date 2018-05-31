@@ -1,0 +1,9 @@
+<div>
+  <div>
+    <app-categorylist-component></app-categorylist-component>
+  </div>
+
+  <app-product-component *ngFor="let p of products"
+    [props]="p">
+  </app-product-component>
+</div>

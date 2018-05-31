@@ -1,0 +1,9 @@
+<div>
+  <h1>{{ pageTitle.categoryAlias }}</h1>
+
+  <app-product-component 
+    *ngFor="let p of categoryProducts"
+    [props]="p">
+  </app-product-component>
+
+</div>

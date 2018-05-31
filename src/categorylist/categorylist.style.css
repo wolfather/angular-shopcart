@@ -1,0 +1,4 @@
+:host ::ng-deep app-product-component {
+    display: inline-flex;
+    background: #ddd;
+}
